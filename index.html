@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tim Proyek EC2 Server</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 10px 0;
+    }
+    h1 {
+      margin: 0;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .team-member {
+      background-color: white;
+      padding: 15px;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+    }
+    .team-member h2 {
+      margin: 10px 0;
+    }
+    .details {
+      display: none;
+      text-align: left;
+    }
+    .member-info {
+      margin-bottom: 5px;
+    }
+    .role {
+      font-weight: bold;
+      color: #007bff;
+    }
+    button {
+      background-color: #009c68;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .member-img {
+      margin-top: 10px;
+      border-radius: 10px;
+      width: 100%;
+      height: auto;
+    }
+  </style>
+  <script>
+    function toggleDetails(id) {
+      const details = document.getElementById(id);
+      details.style.display = details.style.display === "none" ? "block" : "none";
+    }
+  </script>
+</head>
+<body>
+
+<header>
+  <h1>EC2 Server Team</h1>
+</header>
+
+<div class="gallery">
+  <div class="team-member">
+    <h2>Stefanus</h2>
+    <button onclick="toggleDetails('details1')">Lihat Selengkapnya</button>
+    <div class="details" id="details1">
+      <div class="member-info">Kelompok : 3</div>
+      <div class="member-info">User ID : </div>
+      <div class="member-info">Username: <code>stefanus</code></div>
+      <div class="member-info">Home Directory: <code>/home/stefanus</code></div>
+      <div class="member-info">Status Login SSH: <code>Login Successful</code></div>
+      <div class="role">Role: Administrator EC2 & Leader</div>
+      <p>Kontribusi: Setup server, manajemen user dan mengelola tugas anggota Kelompok.</p>
+      <img src="hasil/stefanus.png" alt="Foto Stefanus" class="member-img">
+    </div>
+  </div>
+
+  <div class="team-member">
+    <h2>Glen</h2>
+    <button onclick="toggleDetails('details7')">Lihat Selengkapnya</button>
+    <div class="details" id="details7">
+      <div class="member-info">Kelompok : 3</div>
+      <div class="member-info">User ID : </div>
+      <div class="member-info">Username: <code>glen</code></div>
+      <div class="member-info">Home Directory: <code>/home/glen</code></div>
+      <div class="member-info">Status Login SSH: <code>Login Successful</code></div>
+      <div class="role">Role: Nginx Manager</div>
+      <p>Kontribusi: Instalasi dan konfigurasi Nginx.</p>
+      <img src="hasil/glen.jpeg" alt="Foto Glen" class="member-img">
+    </div>
+  </div>
+
+  <div class="team-member">
+    <h2>Sam</h2>
+    <button onclick="toggleDetails('details2')">Lihat Selengkapnya</button>
+    <div class="details" id="details2">
+      <div class="member-info">Kelompok : 3</div>
+      <div class="member-info">User ID : </div>
+      <div class="member-info">Username: <code>sam</code></div>
+      <div class="member-info">Home Directory: <code>/home/sam</code></div>
+      <div class="member-info">Status Login SSH: <code>Login Successful</code></div>
+      <div class="role">Role: GitHub Manager</div>
+      <p>Kontribusi: Setup repo GitHub dan push konten.</p>
+      <img src="hasil/sam.jpeg" alt="Foto Sam" class="member-img">
+    </div>
+  </div>
+
+  <div class="team-member">
+    <h2>Melati</h2>
+    <button onclick="toggleDetails('details3')">Lihat Selengkapnya</button>
+    <div class="details" id="details3">
+      <div class="member-info">Kelompok : 3</div>
+      <div class="member-info">User ID : </div>
+      <div class="member-info">Username: <code>melati</code></div>
+      <div class="member-info">Home Directory: <code>/home/melati</code></div>
+      <div class="member-info">Status Login SSH: <code>Login Successful</code></div>
+      <div class="role">Role: DevOps</div>
+      <p>Kontribusi: Membuat script git pull.</p>
+      <img src="hasil/melati.jpeg" alt="Foto Melati" class="member-img">
+    </div>
+  </div>
+
+  <div class="team-member">
+    <h2>Fey</h2>
+    <button onclick="toggleDetails('details4')">Lihat Selengkapnya</button>
+    <div class="details" id="details4">
+      <div class="member-info">Kelompok : 3</div>
+      <div class="member-info">User ID : </div>
+      <div class="member-info">Username: <code>fey</code></div>
+      <div class="member-info">Home Directory: <code>/home/fey</code></div>
+      <div class="member-info">Status Login SSH: <code>Login Successful</code></div>
+      <div class="role">Role: Scheduler</div>
+      <p>Kontribusi: Setup cron job.</p>
+      <img src="hasil/fey.png" alt="Foto Fey" class="member-img">
+    </div>
+  </div>
+
+  <div class="team-member">
+    <h2>Juan</h2>
+    <button onclick="toggleDetails('details5')">Lihat Selengkapnya</button>
+    <div class="details" id="details5">
+      <div class="member-info">Kelompok : 3</div>
+      <div class="member-info">User ID : </div>
+      <div class="member-info">Username: <code>juan</code></div>
+      <div class="member-info">Home Directory: <code>/home/juan</code></div>
+      <div class="member-info">Status Login SSH: <code>Login Successful</code></div>
+      <div class="role">Role: Front-end Developer</div>
+      <p>Kontribusi: Membuat website statis.</p>
+      <img src="hasil/juan.png" alt="Foto Juan" class="member-img">
+    </div>
+  </div>
+
+  <div class="team-member">
+    <h2>Nove</h2>
+    <button onclick="toggleDetails('details6')">Lihat Selengkapnya</button>
+    <div class="details" id="details6">
+      <div class="member-info">Kelompok : 3</div>
+      <div class="member-info">User ID : </div>
+      <div class="member-info">Username: <code>nove</code></div>
+      <div class="member-info">Home Directory: <code>/home/nove</code></div>
+      <div class="member-info">Status Login SSH: <code>Login Successful</code></div>
+      <div class="role">Role: QA Tester</div>
+      <p>Kontribusi: Menguji akses web dan SSH, serta memastikan fungsi git pull berjalan.</p>
+      <img src="hasil/nove.jpeg" alt="Foto Nove" class="member-img">
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
